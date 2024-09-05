@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://baktmf1gc4487"]
+
+[ext_resource type="PackedScene" uid="uid://bkxro70dufxiq" path="res://scenes/environment/ground/ground.tscn" id="1_0p58b"]
+[ext_resource type="PackedScene" uid="uid://cypk4yc4brmwo" path="res://scenes/player/player.tscn" id="2_siydc"]
+
+[node name="Main" type="Node"]
+
+[node name="Ground" parent="." instance=ExtResource("1_0p58b")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, -1.4385e-07, -6.67732e-08, -6.67732e-08, -0.763796, 0.645458, -1.4385e-07, -0.645458, -0.763796, 0, 25, 17.8509)
+
+[node name="Player" parent="." instance=ExtResource("2_siydc")]
+
+[node name="CameraPivot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 17.1334, 15.928)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+projection = 1
+size = 19.0
+far = 100.0
